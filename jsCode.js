@@ -14,7 +14,7 @@ function GetUrl() {
 function menu(){
   var _Href = GetUrl();
   var _a = $('.nav a');
-  if(_Href==='undefined'){
+  if(_Href==='undefined'||_Href===''){
 	  _a.eq(0).addClass('active');
   }
   else{
