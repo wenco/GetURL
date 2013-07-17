@@ -1,4 +1,3 @@
-
 //获取当前url
 function GetUrl() {
   var _Href = document.location.href;
