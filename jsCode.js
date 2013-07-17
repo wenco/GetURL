@@ -1,8 +1,10 @@
+//调用方式
 $(function(){
-   menu();//调用
-}
+	menu();
+})
+////////////////////////////////////////////////////////////
 //获取当前url
-function GetUrl() {
+function GetUrl(){
   var _Href = document.location.href;
   _Href = _Href.indexOf('#')>0?_Href = _Href.substring(0, _Href.indexOf('#')):_Href;
   _Href = _Href.indexOf('?')>0?_Href.substring(0, _Href.indexOf('?')):_Href;		  
@@ -13,7 +15,7 @@ function GetUrl() {
 //定义导航选中状态
 function menu(){
   var _Href = GetUrl();
-  var _a = $('.nav a');
+  var _a = $('.nav').find('a');
   if(_Href==='undefined'||_Href===''){
 	  _a.eq(0).addClass('active');
   }
@@ -26,5 +28,3 @@ function menu(){
 	 }
   }
 }
-
-
