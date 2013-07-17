@@ -18,7 +18,7 @@ function menu(){
   var _a = $('.nav a');
   for(i=0;i<_a.length;i++){
 	  if(_a.eq(i).attr('href').toLowerCase()==_Href || _a.eq(i).attr('href').indexOf(_Href)>0){//bug in ie7 $.attr(value) 
-		  			 _a.eq(i).addClass('active').siblings().removeClass('active');
+		  		 _a.eq(i).addClass('active').siblings().removeClass('active');
 		  }
 		  break;
 	 }
