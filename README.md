@@ -1,25 +1,25 @@
 GetURL
 ======
 
-js当前获取url地址中的文件名称，并匹配页面中的url添加actived效果
+很多时候，我们想要点击导航记住当前状态，方便添加active效果以区别和突出当前页面，不想用后端写判断，于是就想起用js来写。 
 
-//获取当前url
-function GetUrl() {
-  var _Href = document.location.href;
-  _Href = _Href.indexOf('#')>0?_Href = _Href.substring(0, _Href.indexOf('#')):_Href;
-	_Href = _Href.indexOf('?')>0?_Href.substring(0, _Href.indexOf('?')):_Href;		  
-  var _Page = _Href.substr(_Href.lastIndexOf('/')+1);	 
-	_Page = _Page.toLowerCase(); //返回小写
-  return _Page;
-}	
-//定义导航选中状态
-function menu(){
-  var _Href = GetUrl();
-  var _a = $('.nav a');
-  for(i=0;i<_a.length;i++){
-	  if(_a.eq(i).attr('href').toLowerCase()==_Href || _a.eq(i).attr('href').indexOf(_Href)>0){//bug in ie7 $.attr(value) 
-		  		 _a.eq(i).addClass('active').siblings().removeClass('active');
-		  }
-		  break;
-	 }
-}
+ex:
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js获取当面文件名并添加样式</title>
+</head>
+<body>
+<header>
+  <menu>
+    <ul>
+      <li><a href="demo.html">demo</a></li>
+      <li><a href="demo1.html">demo1</a></li>
+      <li><a href="demo3.html">demo2</a></li>
+    </ul>
+  </menu>
+</header>
+</body>
+</html>
